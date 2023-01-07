@@ -1,0 +1,17 @@
+# git
+.git
+
+# node.js
+node_modules
+
+# OSX
+.DS_Store
+
+# expo
+.expo
+
+# vscode
+.vscode
+
+# env files if existing
+.env
