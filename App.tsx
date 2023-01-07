@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  NavigationContainer,
-  DefaultTheme,
-  Theme,
-} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Dashboard } from './src/screens/Dashboard';
 import { DeviceManager } from './src/screens/DeviceManager';

@@ -6,6 +6,7 @@ import { DeviceEventEmitter } from 'react-native';
 import {
   CHARACTERISTIC_COMMAND_UUID,
   CHARACTERISTIC_WEIGHT_VALUE_UUID,
+  COMMANDS,
   SERVICE_WEIGHT_UUID,
 } from '../const';
 import { decode } from 'base64-arraybuffer';
@@ -53,7 +54,7 @@ async function tare(): Promise<void> {
     .currentDevice?.writeCharacteristicWithResponseForService(
       SERVICE_WEIGHT_UUID,
       CHARACTERISTIC_COMMAND_UUID,
-      'CgAA'
+      COMMANDS.tare
     );
 
   // reset record when tare
