@@ -1,3 +1,4 @@
+import { center } from '@shopify/react-native-skia';
 import dayjs from 'dayjs';
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
@@ -28,9 +29,13 @@ export function Dashboard() {
     <>
       <View style={{ padding: 20 }}>
         <View>
-          <View style={styleSheet.box}>
-            <Text style={styleSheet.heading2}>{currentDevice?.name}</Text>
-            <Text>Last value index: {lastValue?.index}</Text>
+          <View style={{ paddingBottom: 20 }}>
+            <Text style={{ ...styleSheet.heading2, textAlign: 'center' }}>
+              {currentDevice?.name}
+            </Text>
+            <Text style={{ textAlign: 'center' }}>
+              Last value index: {lastValue?.index}
+            </Text>
           </View>
           <View style={styleSheet.row}>
             <View style={styleSheet.box}>
@@ -43,7 +48,7 @@ export function Dashboard() {
         </View>
       </View>
       <Chart></Chart>
-      <View style={{ paddingVertical: 10 }}>
+      <View style={{ padding: 10 }}>
         <Button title='Tare' onPress={tare}></Button>
         <Button title='Start' onPress={startRecording}></Button>
         <Button title='Finish' onPress={stopRecording}></Button>
